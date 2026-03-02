@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>  
+    <head>
+<title>Ver usuarios</title>
+    </head>
+    <body>
+<h2>Tabla paciente</h2>
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID Paciente</th>
+            <th>Documento</th>
+            <th>Nombre Completo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% usuarios.forEach(usuario => { %>
+            <tr>
+                <td><%= usuario.id_paciente %></td>
+                <td><%= usuario.Documento %></td>
+                <td><%= usuario.Nombre_Completo %></td>
+    </tbody>
+</table>
+<h2>Tabla Cita</h2>
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID cita</th>
+            <th>id_paciente</th>
+            <th>Fecha CIta</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% citas.forEach(cita => { %>
+            <tr>
+                <td><%= cita.id_cita %></td>
+                <td><%= cita.id_paciente %></td>
+                <td><%= cita.Documento %></td>
+                <td><%= cita.Nombre_Completo %></td>
+    </tbody>
+</table>
+    </body>
+</html>
